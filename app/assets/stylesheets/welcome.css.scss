@@ -5,3 +5,12 @@ body {
 	font-family: Verdana, Helvetica, sans-serif;
 	font-size: 0.9em;
 }
+
+form {
+	input {
+		padding: 3px;
+	}
+	.input-number, .output-number {
+		margin: 10px 0;
+	}
+}

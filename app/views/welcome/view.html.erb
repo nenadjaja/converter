@@ -1,7 +1,16 @@
-<div ng-app="">
-	<h1>Welcome to Angular - Test</h1>
-	<p>1 + 1 = {{1+1}}</p>
-	<h3>Type anything</h3>
-	<input type="text" ng-model="data.message">
-	<p>{{data.message}}</p>
+<div ng-app="unitsConverter">
+	<div class="weight-conversion" ng-controller="testController">
+		<h1>Weight conversion</h1>
+		<h3>Pick a unit</h3>
+		<form>
+			<div class="input-number">
+				<label for="inputNumber"> Ounce(s): </label> 
+				<input type="number" min="0" step="1" ng-model="inputNumber" value="1">
+			</div>
+			<div class="output-number">
+				<label for="outputNumber"> Gram(s): </label>
+				<input type="text" value={{convertToGrams(inputNumber)}}>
+			</div>
+		</form>
+	</div>
 </div>
