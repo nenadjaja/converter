@@ -1,16 +1,35 @@
-<div ng-app="unitsConverter">
-	<div class="weight-conversion" ng-controller="testController">
-		<h1>Weight conversion</h1>
-		<h3>Pick a unit</h3>
-		<form>
-			<div class="input-number">
-				<label for="inputNumber"> Ounce(s): </label> 
-				<input type="number" min="0" step="1" ng-model="inputNumber" value="1">
-			</div>
-			<div class="output-number">
-				<label for="outputNumber"> Gram(s): </label>
-				<input type="text" value={{convertToGrams(inputNumber)}}>
-			</div>
-		</form>
-	</div>
-</div>
+<div class="container" ng-app="unitsConverter">
+  <div class="row">
+  	<div class="weight-conversion col-lg-6" ng-controller="testController">
+  		<h1>Weight conversion</h1>
+
+      <div class="input-group first-group">
+        <input class="form-control input-number" type="number" min="0" step="1" ng-model="inputNumber" value="1" width="100px">
+        <span class="input-group-btn button-group" role="group" ng-click="selectFirstUnit($event)">
+          <button type="button" class="btn btn-default default-color">Ounce</button>
+          <button type="button" class="btn btn-default">Pound</button>
+          <button type="button" class="btn btn-default">Gram</button>
+          <button type="button" class="btn btn-default">Kilogram</button>
+          <button type="button" class="btn btn-default">tsp</button>
+          <button type="button" class="btn btn-default">Tbsp</button>
+          <button type="button" class="btn btn-default">Cup</button>
+        </span>
+      </div>     
+
+      <div class="input-group second-group">
+        <input class="form-control input-number" type="text" 
+        value={{updateSecondUnit(inputNumber)}}>
+        <span class="input-group-btn button-group" role="group" ng-click="selectSecondUnit($event)">
+          <button type="button" class="btn btn-default">Ounce</button>
+          <button type="button" class="btn btn-default">Pound</button>
+          <button type="button" class="btn btn-default default-color">Gram</button>
+          <button type="button" class="btn btn-default">Kilogram</button>
+          <button type="button" class="btn btn-default">tsp</button>
+          <button type="button" class="btn btn-default">Tbsp</button>
+          <button type="button" class="btn btn-default">Cup</button>
+        </span>
+      </div>
+          
+  	</div> <!-- /.weight-conversion -->
+  </div> <!-- /.row --> 
+</div> <!-- /.container -->
