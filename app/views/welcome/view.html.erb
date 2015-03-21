@@ -3,7 +3,7 @@
   	<div class="main-content col-lg-6" ng-controller="testController">
   		<h4>Weight and volume conversion</h4>
 
-      <div class="pull-left button-group first-group">
+      <div class="pull-left button-group first-group" data-js="from-unit">
         <input class="form-control input-number" type="number" min="0" step="1" ng-model="inputNumber" value="1" width="100px">
         <div ng-click="selectFirstUnit($event)">
           <button type="button" class="btn btn-default default-color selected">Ounce</button>
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="pull-left button-group second-group">
+      <div class="pull-left button-group second-group" data-js="to-unit">
         <input class="form-control input-number" type="text" 
         value={{updateSecondUnit(inputNumber)}}>
         <div ng-click="selectSecondUnit($event)">

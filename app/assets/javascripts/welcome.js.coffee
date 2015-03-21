@@ -33,31 +33,33 @@ unitsConverter.controller 'testController', ['$scope', ($scope) =>
     (unitToOunceRatio * ounceToUnitRatio * quantity).toFixed(4)
 
   # click handlers
-  # NOTE: find a more elegant way to do the styling
+  # TODO: find a more elegant way to do the styling
   $scope.selectFirstUnit = (event) =>
-    # CSS stuff
-    $('.first-group').find('button').removeClass('default-color').removeClass('selected')
-    $(event.target).addClass('default-color').addClass('selected')
+    $scope.styleSelected('[data-js=from-unit]');
 
     # conversion logic
     input = event.target.textContent.toLowerCase()
-    output = $('.second-group').find('.selected').text().toLowerCase()
+    output = $('[data-js=to-unit]').find('.selected').text().toLowerCase()
     quantity = parseFloat($('.input-number')[0].value)
     result = $scope.convertToUnit(input, output, quantity)
     $('.input-number')[1].value = result
     false 
 
   $scope.selectSecondUnit = (event) =>
-    $('.second-group').find('button').removeClass('default-color').removeClass('selected')
-    $(event.target).addClass('default-color').addClass('selected')
+    $scope.styleSelected('[data-js=to-unit]');
     false
 
   $scope.updateSecondUnit = (quantity) =>
     unless quantity
       $('.input-number')[1].value = ""
       return 
-    input = $('.first-group').find('.selected').text().toLowerCase()
-    output = $('.second-group').find('.selected').text().toLowerCase()
+    input = $('[data-js=from-unit]').find('.selected').text().toLowerCase()
+    output = $('[data-js=to-unit]').find('.selected').text().toLowerCase()
     result = $scope.convertToUnit(input, output, quantity)
     $('.input-number')[1].value = result
+
+  # styling related
+  $scope.styleSelected = (element) =>
+    $(element).find('button').removeClass('default-color').removeClass('selected');
+    $(event.target).addClass('default-color').addClass('selected');
 ]
