@@ -3,14 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
 	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 0.9em;
+	// font-size: 0.9em;
 }
 
 
+.container {
+
+	.main-content {
+		h4 {
+			margin-bottom: 24px;
+		}
+	}
+}
 /* buttons */
 .button-group {
+	width: 50%;
 	button {
-		background-color: #8DDADF;
+		width: 100px;
+		margin-top: 5px;
+		background-color: #BDE5E7;
+		border: #90CDD1;
 		
 		&:hover {
 			box-shadow: inset 0 0 0 1px #90CDD1,inset 0 5px 30px #35A7AF;
@@ -41,4 +53,7 @@ body {
 .input-number {
 	// width: 100px !important;
 	height: 33px !important;
+	min-width: 100px;
+	width: 70%;
+
 }

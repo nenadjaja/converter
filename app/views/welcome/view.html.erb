@@ -1,11 +1,11 @@
 <div class="container" ng-app="unitsConverter">
   <div class="row">
-  	<div class="weight-conversion col-lg-6" ng-controller="testController">
-  		<h1>Weight conversion</h1>
+  	<div class="main-content col-lg-6" ng-controller="testController">
+  		<h4>Weight and volume conversion</h4>
 
-      <div class="input-group first-group">
+      <div class="pull-left button-group first-group">
         <input class="form-control input-number" type="number" min="0" step="1" ng-model="inputNumber" value="1" width="100px">
-        <span class="input-group-btn button-group" role="group" ng-click="selectFirstUnit($event)">
+        <div ng-click="selectFirstUnit($event)">
           <button type="button" class="btn btn-default default-color selected">Ounce</button>
           <button type="button" class="btn btn-default">Pound</button>
           <button type="button" class="btn btn-default">Gram</button>
@@ -13,23 +13,30 @@
           <button type="button" class="btn btn-default">tsp</button>
           <button type="button" class="btn btn-default">Tbsp</button>
           <button type="button" class="btn btn-default">Cup</button>
-        </span>
-      </div>     
+          <button type="button" class="btn btn-default">Fl Ounce</button>
+          <button type="button" class="btn btn-default">Pint</button>
+          <button type="button" class="btn btn-default">Milliliter</button>
+          <button type="button" class="btn btn-default">Liter</button>
+        </div>
+      </div>
 
-      <div class="input-group second-group">
+      <div class="pull-left button-group second-group">
         <input class="form-control input-number" type="text" 
         value={{updateSecondUnit(inputNumber)}}>
-        <span class="input-group-btn button-group" role="group" ng-click="selectSecondUnit($event)">
+        <div ng-click="selectSecondUnit($event)">
           <button type="button" class="btn btn-default">Ounce</button>
           <button type="button" class="btn btn-default">Pound</button>
-          <button type="button" class="btn btn-default default-color selected">Gram</button>
+          <button type="button" class="btn btn-default selected default-color">Gram</button>
           <button type="button" class="btn btn-default">Kilogram</button>
           <button type="button" class="btn btn-default">tsp</button>
           <button type="button" class="btn btn-default">Tbsp</button>
           <button type="button" class="btn btn-default">Cup</button>
-        </span>
+          <button type="button" class="btn btn-default">Fl Ounce</button>
+          <button type="button" class="btn btn-default">Pint</button>
+          <button type="button" class="btn btn-default">Milliliter</button>
+          <button type="button" class="btn btn-default">Liter</button>
+        </div>
       </div>
-          
-  	</div> <!-- /.weight-conversion -->
+  	</div> <!-- /.main-content -->
   </div> <!-- /.row --> 
 </div> <!-- /.container -->
