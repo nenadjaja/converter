@@ -2,9 +2,19 @@
   <div class="row">
   	<div class="main-content col-lg-6" ng-controller="testController">
   		<h4>Weight and volume conversion</h4>
-
+      <div class="radio-buttons"> 
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="volumeDry" ng-model="state" ng-change="selectSolidUnits()" checked="true"> Volume dry
+         </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="volumeLiquid" ng-model="state" ng-change="selectLiquidUnits()"> Volume liquid
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="weight" ng-model="state" ng-change="selectLiquidUnits()"> Weight
+        </label>
+      </div>
       <div class="pull-left button-group first-group" data-js="from-unit">
-        <input class="form-control input-number" type="number" min="0" step="1" ng-model="inputNumber" value="1" width="100px">
+        <input class="form-control input-number" type="number" min="0" step="1" ng-model="inputNumber" value="1">
         <div ng-click="selectFirstUnit($event)">
           <button type="button" class="btn btn-default default-color selected">Ounce</button>
           <button type="button" class="btn btn-default">Pound</button>
