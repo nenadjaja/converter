@@ -1,16 +1,19 @@
+<% content_for(:title) { 'Units conversions'} %>
+
+<div id='main-container'>
 <div class="container" ng-app="unitsConverter">
   <div class="row">
-  	<div class="main-content col-lg-6" ng-controller="testController">
-  		<h4>Weight and volume conversion</h4>
+    <div class="main-content col-lg-6" ng-controller="unitsController">
+      <h4>Weight and volume conversion</h4>
       <div class="radio-buttons"> 
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" value="volumeDry" ng-model="state" ng-change="selectSolidUnits()" checked="true"> Volume dry
-         </label>
-        <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" value="volumeLiquid" ng-model="state" ng-change="selectLiquidUnits()"> Volume liquid
+          <input type="radio" name="inlineRadioOptions" value="weight" ng-model="state" ng-change="selectLiquidUnits()"> Weight
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" value="weight" ng-model="state" ng-change="selectLiquidUnits()"> Weight
+          <input type="radio" name="inlineRadioOptions" value="volumedry" ng-model="state" ng-change="selectSolidUnits()" checked="true"> Volume dry
+         </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="volumeliquid" ng-model="state" ng-change="selectLiquidUnits()"> Volume liquid
         </label>
       </div>
       <div class="pull-left button-group first-group" data-js="from-unit">
@@ -47,6 +50,10 @@
           <button type="button" class="btn btn-default">Liter</button>
         </div>
       </div>
-  	</div> <!-- /.main-content -->
+    </div> <!-- /.main-content -->
   </div> <!-- /.row --> 
 </div> <!-- /.container -->
+
+
+
+</div>

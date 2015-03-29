@@ -14,5 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require angular
+//= require_self
 
-//= require_tree .
+//= require_tree ./services
+//= require_tree ./controllers
+//= require_tree ../templates
+
+var unitsConverter = angular.module('unitsConverter', []);
+window.unitsConverter = unitsConverter;
