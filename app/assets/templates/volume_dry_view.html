@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="main-content col-lg-6" ng-controller="unitsController">
+      <h4>Weight and volume conversion</h4>
+      <div class="radio-buttons"> 
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="weight" ng-model="state" ng-change="selectLiquidUnits()"> Weight
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="volumedry" ng-model="state" ng-change="selectSolidUnits()" checked="true"> Volume dry
+         </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" value="volumeliquid" ng-model="state" ng-change="selectLiquidUnits()"> Volume liquid
+        </label>
+      </div>
+      <div class="pull-left button-group first-group" data-js="from-unit">
+        <input class="form-control input-number" type="number" min="0" step="1" ng-model="inputNumber" value="1">
+        <div ng-click="selectFirstUnit($event)">
+          <button type="button" class="btn btn-default default-color selected">Ounce</button>
+          <button type="button" class="btn btn-default">Pound</button>
+          <button type="button" class="btn btn-default">Gram</button>
+          <button type="button" class="btn btn-default">Kilogram</button>
+          <button type="button" class="btn btn-default">tsp</button>
+          <button type="button" class="btn btn-default">Tbsp</button>
+          <button type="button" class="btn btn-default">Cup</button>
+          <button type="button" class="btn btn-default">Fl Ounce</button>
+          <button type="button" class="btn btn-default">Pint</button>
+          <button type="button" class="btn btn-default">Milliliter</button>
+          <button type="button" class="btn btn-default">Liter</button>
+        </div>
+      </div>
+
+      <div class="pull-left button-group second-group" data-js="to-unit">
+        <input class="form-control input-number" type="text" 
+        value={{updateSecondUnit(inputNumber)}}>
+        <div ng-click="selectSecondUnit($event)">
+          <button type="button" class="btn btn-default">Ounce</button>
+          <button type="button" class="btn btn-default">Pound</button>
+          <button type="button" class="btn btn-default selected default-color">Gram</button>
+          <button type="button" class="btn btn-default">Kilogram</button>
+          <button type="button" class="btn btn-default">tsp</button>
+          <button type="button" class="btn btn-default">Tbsp</button>
+          <button type="button" class="btn btn-default">Cup</button>
+          <button type="button" class="btn btn-default">Fl Ounce</button>
+          <button type="button" class="btn btn-default">Pint</button>
+          <button type="button" class="btn btn-default">Milliliter</button>
+          <button type="button" class="btn btn-default">Liter</button>
+        </div>
+      </div>
+    </div> <!-- /.main-content -->
+  </div> <!-- /.row --> 
+</div> <!-- /.container -->
