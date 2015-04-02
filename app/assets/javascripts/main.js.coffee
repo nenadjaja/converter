@@ -4,7 +4,7 @@ unitsConverter.config ($routeProvider) =>
   $routeProvider.when('/',
   {
       controller: "unitsController",
-      templateUrl: "volume_dry_view.html"
+      templateUrl: "layout.html"
   }).
   otherwise({
       redirectTo: '/'

@@ -11,6 +11,14 @@ unitsConverter.controller 'unitsController', ['$scope', 'unitsModels', ($scope, 
 
   $scope.state = "weight"
 
+  $scope.getInclude = () =>
+    if $scope.state is 'weight'
+      return "weight.html"
+    else if $scope.state is 'volumedry'
+      return "volume_dry.html"
+    else 
+      return "volume_liquid.html"
+
   # it converts input unit into the output unit
   # depending on the quantity and ratio betw units
   $scope.convertToUnit = (unitFrom, unitTo, quantity) =>
