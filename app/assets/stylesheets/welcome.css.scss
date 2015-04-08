@@ -10,12 +10,18 @@ body {
 .container {
 
 	.main-content {
-		h4 {
-			margin-bottom: 24px;
+		padding: 0px 10px;
+
+		header {
+			padding: 2px;
+			text-align: center;
+			background-color: #BDE5E7;
+			margin-bottom: 10px;
 		}
 	}
 	.radio-buttons {
 		margin-bottom: 12px;
+		text-align: center;
 	}
 }
 /* buttons */

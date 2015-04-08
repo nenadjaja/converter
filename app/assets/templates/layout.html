@@ -1,15 +1,17 @@
 <div class="row">
-    <div class="main-content col-lg-6" ng-controller="unitsController">
-      <h4>Weight and volume conversion</h4>
+    <div class="main-content" ng-controller="unitsController">
+      <header>
+        <h4>Units converter</h4>
+      </header>
       <div class="radio-buttons"> 
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" value="weight" ng-model="state" ng-change="selectLiquidUnits()"> Weight
+          <input type="radio" name="inlineRadioOptions" value="weight" ng-model="state" ng-change="selectLiquidUnits()"> Mass
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" value="volumedry" ng-model="state" ng-change="selectSolidUnits()" checked="true"> Volume dry
+          <input type="radio" name="inlineRadioOptions" value="volumedry" ng-model="state" ng-change="selectSolidUnits()" checked="true"> Vol dry
          </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" value="volumeliquid" ng-model="state" ng-change="selectLiquidUnits()"> Volume liquid
+          <input type="radio" name="inlineRadioOptions" value="volumeliquid" ng-model="state" ng-change="selectLiquidUnits()"> Vol liquid
         </label>
       </div>
 
