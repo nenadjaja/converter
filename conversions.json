@@ -1,0 +1,56 @@
+ "ounce":
+      "ounce": 1
+      "pound": 0.0625
+      "gram": 28.2495
+      "kilogram": 0.0283495
+      "tsp": 6
+      "tbsp": 2
+      "cup": 0.125     
+    "pound": 
+      "ounce": 16
+      "pound": 1
+      "gram": 453.592
+      "kilogram": 0.453592
+      "tsp": 96
+      "tbsp": 32
+      "cup": 2
+    "gram":
+      "ounce": 0.035274
+      "pound": 0.0022
+      "gram": 1
+      "kilogram": 0.001
+      "tsp": 0.203
+      "tbsp": 0.0667
+      "cup": 0.00423
+    "kilogram":
+      "ounce": 35.274
+      "pound": 2.20462
+      "gram": 1000
+      "kilogram": 1
+      "tsp": 175.82
+      "tbsp": 66.6667
+      "cup": 8
+    "tsp":
+      "ounce": 0.1667
+      "pound": 0.01
+      "gram": 4.92892
+      "kilogram": 0.01
+      "tsp": 1
+      "tbsp": 0.3333
+      "cup": 0.0208333
+    "tbsp":
+      "ounce": 0.5
+      "pound": 32
+      "gram": 15
+      "kilogram": 0.02
+      "tsp": 3
+      "tbsp": 1
+      "cup": 0.0625
+    "cup":
+      "ounce": 8
+      "pound": 0.52159
+      "gram": 236.58824
+      "kilogram": 0.23659
+      "tsp": 48
+      "tbsp": 16
+      "cup": 1
